@@ -293,9 +293,11 @@
 
 // Global configuration variables
 extern bool conf_general_permanent_nrf_found;
+extern volatile backup_data g_backup;
 
 // Functions
 void conf_general_init(void);
+bool conf_general_store_backup_data(void);
 bool conf_general_read_eeprom_var_hw(eeprom_var *v, int address);
 bool conf_general_read_eeprom_var_custom(eeprom_var *v, int address);
 bool conf_general_store_eeprom_var_hw(eeprom_var *v, int address);
